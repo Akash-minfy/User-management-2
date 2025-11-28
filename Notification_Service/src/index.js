@@ -6,6 +6,11 @@ const rabbit = require('./lib/rabbit');
 
 const PORT = process.env.PORT || config.port || 5001;
 const ENV = process.env.NODE_ENV || 'development';
+const mongoose = require("mongoose");
+
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB connected for Notification Service"))
+  .catch(err => console.error("MongoDB connection error:", err));
 
 app.listen(PORT, () => {
   logger.info(`Notification Service running in ${ENV} on port ${PORT}`);

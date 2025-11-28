@@ -25,14 +25,14 @@ Run User Service (from repo root):
 ```powershell
 cd User_Service
 npm install
-npm run dev
+npm start
 ```
 
 Run Notification Service (from repo root):
 ```powershell
 cd Notification_Service
 npm install
-npm run dev   # runs node src/index.js
+npm start   # runs node src/index.js
 ```
 
 Run the email worker (separate terminal):
@@ -45,7 +45,7 @@ Run frontend (if needed):
 ```powershell
 cd Frontend
 npm install
-npm run dev
+npm start
 ```
 
 ## Common environment variables
