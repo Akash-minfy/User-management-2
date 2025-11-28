@@ -1,0 +1,34 @@
+openapi: 3.0.0
+info:
+title: User Service API
+version: 1.0.0
+paths:
+/api/auth/signup:
+post:
+summary: Signup
+requestBody:
+required: true
+content:
+application/json:
+schema:
+type: object
+properties:
+email: { type: string }
+password: { type: string }
+responses:
+'201':
+description: Created
+/api/auth/login:
+post:
+summary: Login
+requestBody:
+content:
+application/json:
+schema:
+type: object
+properties:
+email: { type: string }
+password: { type: string }
+responses:
+'200':
+description: OK
